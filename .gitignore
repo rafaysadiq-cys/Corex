@@ -1,0 +1,15 @@
+# Source code and development files
+src/
+config/
+assets/
+*.ps1
+*.bat
+README.dev.md
+Toolkit.exe
+
+# Temporary files and logs
+*.tmp
+*.log
+*.bak
+.vs/
+.vscode/
