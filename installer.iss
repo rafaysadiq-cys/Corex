@@ -5,7 +5,7 @@
 ; =====================================================================
 
 #define MyAppName "Corex"
-#define MyAppVersion "1.0.0"
+#define MyAppVersion "1.1.0"
 #define MyAppPublisher "Rafay Sadiq"
 #define MyAppURL "https://github.com/rafaysadiq-cys/Corex"
 #define MyAppExeName "Corex.exe"
@@ -14,7 +14,7 @@
 AppId={{9ACFCD0D-8D45-4F0A-B7FE-01A3396F93D2}
 AppName={#MyAppName}
 AppVersion={#MyAppVersion}
-AppVerName={#MyAppName} v1.0
+AppVerName={#MyAppName} v1.1
 AppPublisher={#MyAppPublisher}
 AppPublisherURL={#MyAppURL}
 AppSupportURL={#MyAppURL}
