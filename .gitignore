@@ -8,6 +8,7 @@ README.dev.md
 Toolkit.exe
 
 # Temporary files and logs
+Corex_*.exe
 *.tmp
 *.log
 *.bak
