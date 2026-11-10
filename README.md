@@ -190,18 +190,6 @@ Accessible by clicking the Corex logo in the top titlebar or sidebar header:
 
 ---
 
-## Building from Source
-
-To compile Corex as a self-contained single-file executable and produce the signed Windows Setup package:
-
-```cmd
-build.bat
-```
-
-This runs `dotnet publish` with `--self-contained true`, applies digital signatures with Authenticode, and compiles `Corex_Setup.exe` with Inno Setup.
-
----
-
 ## License
 
 Corex is released under the **MIT License**.
