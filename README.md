@@ -181,12 +181,12 @@ Comprehensive user guide with clickable navigation triggers:
 - Fixing disappearing Wi-Fi adapters under Windows 11 idle sleep.
 - Internet Download Manager (IDM) lifetime activation instructions.
 
-### 16. About Corex & Verified Developer Details
+### 16. About Corex & Developer Information
 Accessible by clicking the Corex logo in the top titlebar or sidebar header:
-- Author: **Rafay Sadiq**
-- GitHub Profile: [`https://github.com/rafaysadiq-cys`](https://github.com/rafaysadiq-cys)
-- Direct Email: `rafaysadiq.cys@gmail.com` (with 1-click copy button)
-- License: MIT License
+- **Author / Lead Dev**: Rafay Sadiq
+- **GitHub**: [github.com/rafaysadiq-cys](https://github.com/rafaysadiq-cys)
+- **Direct Email**: [rafaysadiq.cys@gmail.com](mailto:rafaysadiq.cys@gmail.com)
+- **License**: MIT License
 
 ---
 
