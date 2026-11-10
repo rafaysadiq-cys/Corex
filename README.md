@@ -78,7 +78,32 @@ Real-time hardware and operating system inventory without background polling ove
 - System uptime counter and last boot timestamp.
 - Structured hardware log export to plaintext file.
 
-### 4. UI/UX Interface Tweaks
+### 4. Battery Health & BMS Tamper Diagnostics
+Comprehensive real-time battery diagnostics directly querying Windows kernel subsystems, ACPI gas gauges, and Battery Management Systems (BMS):
+- **Live Battery Telemetry**: Real-time AC connection status, charge level percentage, operating voltage, and estimated runtime remaining.
+- **Factory Hardware Specifications**: Battery Model ID, OEM manufacturer verification, hardware serial number, chemistry, design capacity (mWh), and full charge capacity (mWh).
+- **Health & Degradation Wear**: Precise battery health percentage and capacity loss wear rating calculated against original factory specs.
+- **Charge Cycle Tracking**: Real-time cycle count with condition rating and expected lifespan projection.
+- **Authenticity & Tamper Detection (BMS Software Audit)**: Heuristic checks for counterfeit batteries, aftermarket generic clones, and EEPROM/BMS cycle reset tools (e.g. NLBA1/EV2300 cycle zeroing with high wear).
+- **1-Click Official Battery Reports**: Generate the native Windows HTML battery report or export a plaintext hardware audit report directly to the Desktop.
+
+### 5. System Security & Defense Baseline
+Low-level registry policy baselines and exploit mitigations:
+- **LSA Protection (RunAsPPL)**: Locks LSASS process memory against credential dumpers like Mimikatz.
+- **Disable LLMNR & NetBIOS**: Blocks local network name poisoning and NBT-NS spoofing (e.g. Responder).
+- **Disable Legacy SMBv1**: Hardens against WannaCry and EternalBlue exploits.
+- **Attack Surface Reduction (ASR)**: Blocks obfuscated scripts, Office child processes, and executable email payloads.
+- **Remote Desktop Hardening**: Enforces Network Level Authentication (NLA).
+- **USB Defense**: 1-click USB Read-Only mode to prevent data theft and complete AutoPlay/AutoRun disablement against shortcut viruses.
+
+### 6. BitLocker Drive Encryption Manager (Windows Home & Pro)
+Enterprise-grade encryption management available across all Windows editions:
+- Live volume encryption status, percentage progress bar, and lock/unlock states.
+- 1-click Turn On BitLocker with password encryption and 48-digit Recovery Key backup.
+- Decryption safeguards preventing accidental drive lock while conversion is active.
+- Suspend / Resume protection and emergency auto-unlock configuration.
+
+### 7. UI/UX Interface Tweaks
 Fine-grained customization for standard Windows components:
 - Classic right-click context menu toggle.
 - File extensions and hidden files toggles.
@@ -87,14 +112,14 @@ Fine-grained customization for standard Windows components:
 - Background activity suppression for Copilot and Recall telemetry components.
 - Direct management of notification thresholds and account banner prompts.
 
-### 5. Debloating and Package Removal
+### 8. Debloating and Package Removal
 Removes non-essential preinstalled UWP packages and provisioned applications:
 - Preinstalled trial games (Candy Crush, Solitaire, Xbox Extras, Microsoft Games).
 - Redundant consumer apps (Feedback Hub, People, Maps, 3D Viewer, Mixed Reality, OneNote, Phone Link, Teams Personal).
 - Telemetry-heavy background widgets and Cortana.
 - Complete uninstallation routine for Microsoft OneDrive, including sync process termination, installer execution, and residual folders purge.
 
-### 6. Privacy & Telemetry Hardening
+### 9. Privacy & Telemetry Hardening
 Disables tracking mechanisms and diagnostic logging services at the policy level:
 - Sets `AllowTelemetry` policy value to `0` (Security/Enterprise baseline).
 - Stops and disables `DiagTrack` (Connected User Experiences and Telemetry) and `dmwappushservice`.
@@ -102,7 +127,7 @@ Disables tracking mechanisms and diagnostic logging services at the policy level
 - Shuts down sensor-based location tracking and remote speech recognition collection.
 - Blocks diagnostic feedback frequency prompts and tailored experience profiling.
 
-### 7. Performance & Service Management
+### 10. Performance & Service Management
 Optimizes system resources and responsiveness:
 - Service state configuration: Safely adjusts non-critical background services including Geolocation, Maps Broker, Retail Demo, and Fax.
 - Superfetch / SysMain configuration for mechanical drives experiencing sustained disk usage.
@@ -110,7 +135,7 @@ Optimizes system resources and responsiveness:
 - Visual effect adjustments to reduce window transition delays.
 - Clean Hardware Power Off button: Executes clean, 100% full hardware power shutdown without hybrid sleep.
 
-### 8. App Installer
+### 11. App Installer
 Silent package acquisition via the Windows Package Manager (winget) engine:
 - Web Browsers: Google Chrome, Mozilla Firefox, Brave, Arc.
 - Development Runtimes: Visual Studio Code, Git, Node.js LTS, Python 3.12, OpenJDK 21, Windows Terminal.
@@ -118,18 +143,18 @@ Silent package acquisition via the Windows Package Manager (winget) engine:
 - Media & Communication: Spotify, VLC, AIMP, OBS Studio, Discord, Telegram, WhatsApp, Zoom, Slack.
 - Documents & Runtimes: LibreOffice, WPS Office, Adobe Reader, Microsoft Visual C++ All-in-One runtimes, .NET runtimes, DirectX.
 
-### 9. Activation Tools
+### 12. Activation Tools
 - Check Windows License Expiration status (`slmgr.vbs /xpr`).
 - One-click launch for Microsoft Activation Scripts (MAS) for Windows & Office.
 - One-click launch for official IDM Activation Script (IAS).
 
-### 10. Customization
+### 13. Customization
 - System-wide Dark Mode / Light Mode enforcement across applications and shell surfaces.
 - Taskbar icon alignment (Left / Center).
 - Desktop system icon visibility (This PC, Recycle Bin, Control Panel, Network).
 - Desktop icon spacing adjustments.
 
-### 11. Network Repair & DNS Configuration
+### 14. Network Repair & DNS Configuration
 - Active adapter identification with IPv4, Gateway, DNS, and Link Speed.
 - TCP/IP Winsock stack reset and DNS resolver cache flush.
 - Wi-Fi adapter reset and Bluetooth service restart.
@@ -137,13 +162,13 @@ Silent package acquisition via the Windows Package Manager (winget) engine:
 - Fix for disappearing Wi-Fi adapter (disables PCIe sleep power cuts).
 - One-click DNS server configuration (Google, Cloudflare, Quad9, OpenDNS, Default/DHCP).
 
-### 12. Windows Update Management
+### 15. Windows Update Management
 - Pause Windows Updates for 30 days.
 - Resume Windows Updates.
 - Disable driver updates in Windows Update.
 - Disable automatic restart after updates when users are logged on.
 
-### 13. Documentation & User Manual
+### 16. Documentation & User Manual
 Comprehensive, professional technical documentation with direct underlined action triggers:
 - Operational fundamentals and multi-threaded architecture overview.
 - Tab-by-tab operating guide covering all 12 modules.
