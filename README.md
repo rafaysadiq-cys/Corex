@@ -2,7 +2,7 @@
 
 [![Platform](https://img.shields.io/badge/Platform-Windows%2010%20%7C%2011-0078D6?style=flat-square)](https://github.com/rafaysadiq-cys/Corex)
 [![Architecture](https://img.shields.io/badge/Architecture-x64-555555?style=flat-square)](https://github.com/rafaysadiq-cys/Corex)
-[![Version](https://img.shields.io/badge/Version-1.1.0-0366d6?style=flat-square)](https://github.com/rafaysadiq-cys/Corex/releases)
+[![Version](https://img.shields.io/badge/Version-1.2.0-0366d6?style=flat-square)](https://github.com/rafaysadiq-cys/Corex/releases)
 [![Runtime](https://img.shields.io/badge/Runtime-100%25%20Self--Contained-2ea44f?style=flat-square)](https://github.com/rafaysadiq-cys/Corex)
 [![Installer](https://img.shields.io/badge/Installer-Corex__Setup.exe-0969da?style=flat-square)](https://github.com/rafaysadiq-cys/Corex/releases)
 [![License](https://img.shields.io/badge/License-MIT-gray?style=flat-square)](LICENSE)
@@ -36,7 +36,7 @@ Corex is distributed as a **100% self-contained single-file package** that bundl
 | Parameter | Specification |
 | :--- | :--- |
 | Application Name | Corex |
-| Version | 1.1.0 |
+| Version | 1.2.0 |
 | Category | Windows Optimizer & Maintenance Suite |
 | Publisher / Author | Rafay Sadiq |
 | Digital Signature | Authenticode SHA256 (`CN=Rafay Sadiq`) |
