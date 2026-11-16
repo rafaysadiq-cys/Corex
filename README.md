@@ -1,245 +1,254 @@
-# Corex
+<div align="center">
 
-[![Platform](https://img.shields.io/badge/Platform-Windows%2010%20%7C%2011-0078D6?style=flat-square)](https://github.com/rafaysadiq-cys/Corex)
-[![Architecture](https://img.shields.io/badge/Architecture-x64-555555?style=flat-square)](https://github.com/rafaysadiq-cys/Corex)
-[![Version](https://img.shields.io/badge/Version-1.2.0-0366d6?style=flat-square)](https://github.com/rafaysadiq-cys/Corex/releases)
-[![Runtime](https://img.shields.io/badge/Runtime-100%25%20Self--Contained-2ea44f?style=flat-square)](https://github.com/rafaysadiq-cys/Corex)
-[![Installer](https://img.shields.io/badge/Installer-Corex__Setup.exe-0969da?style=flat-square)](https://github.com/rafaysadiq-cys/Corex/releases)
-[![License](https://img.shields.io/badge/License-MIT-gray?style=flat-square)](LICENSE)
+# ⚡ COREX
 
-**Corex** is an enterprise-grade, native C# WPF Windows Optimizer and Maintenance Suite engineered for Windows 10 and Windows 11. Designed from the ground up on an asynchronous multi-threaded architecture (`async / await`), Corex delivers instant responsiveness, zero interface lag, and deep system cleaning without relying on fragile PowerShell scripts or external command wrappers.
+<p align="center">
+  <b>The Next-Generation Windows 10 &amp; 11 Optimization, Security Hardening &amp; Hardware Testing Suite</b>
+  <br />
+  <i>Engineered in Pure Native C# (.NET 9 / WPF) • Multi-Threaded Asynchronous Core • 100% Self-Contained</i>
+</p>
 
-Corex is distributed as a **100% self-contained single-file package** that bundles the necessary desktop runtime components directly into the executable. It runs instantly out-of-the-box on freshly installed Windows environments without prompting for manual runtime downloads.
+<p align="center">
+  <a href="https://github.com/rafaysadiq-cys/Corex/releases"><img src="https://img.shields.io/badge/Version-v1.3.0-0969da?style=for-the-badge&logo=github&logoColor=white" alt="Version" /></a>
+  <a href="https://github.com/rafaysadiq-cys/Corex"><img src="https://img.shields.io/badge/Platform-Windows%2010%20%7C%2011-0078D6?style=for-the-badge&logo=windows&logoColor=white" alt="Platform" /></a>
+  <a href="https://github.com/rafaysadiq-cys/Corex"><img src="https://img.shields.io/badge/Architecture-x64%20(AMD64)-343b42?style=for-the-badge&logo=intel&logoColor=white" alt="Architecture" /></a>
+  <a href="https://github.com/rafaysadiq-cys/Corex"><img src="https://img.shields.io/badge/Framework-.NET%209.0%20(Native%20WPF)-512BD4?style=for-the-badge&logo=dotnet&logoColor=white" alt="Framework" /></a>
+  <a href="https://github.com/rafaysadiq-cys/Corex"><img src="https://img.shields.io/badge/Runtime-100%25%20Self--Contained-2ea44f?style=for-the-badge&logo=dependabot&logoColor=white" alt="Runtime" /></a>
+  <a href="https://github.com/rafaysadiq-cys/Corex/blob/main/LICENSE"><img src="https://img.shields.io/badge/License-MIT-e3b341?style=for-the-badge" alt="License" /></a>
+</p>
 
-**Author & Lead Developer:** Rafay Sadiq ([@rafaysadiq-cys](https://github.com/rafaysadiq-cys)) | [rafaysadiq.cys@gmail.com](mailto:rafaysadiq.cys@gmail.com)
-
----
-
-## Downloads & Distribution Packages
-
-| Package | File | Approximate Size | Description |
-| :--- | :--- | :--- | :--- |
-| **Windows Setup Wizard (Recommended)** | [`Corex_Setup.exe`](Corex_Setup.exe) | ~60.6 MB | Complete Windows installer wizard with custom directory picker, Desktop shortcut option, Start Menu folder, and clean Windows Control Panel / Settings uninstaller integration. |
-| **Standalone Portable Executable** | [`Corex.exe`](Corex.exe) | ~64.7 MB | Self-contained single-file portable executable. Bundles the complete runtime. Zero installation or runtime prerequisites required. |
-
-### Setup Wizard Highlights
-- **Custom Directory Picker**: Install into any directory (defaults to `C:\Program Files\Corex` with Browse navigation).
-- **Shortcut Deployment**: Optional Desktop and Start Menu program group shortcuts.
-- **Clean Uninstaller**: Full integration into Windows "Installed Apps" and "Programs and Features" via `unins000.exe`.
-- **Immediate Launch**: Option to start Corex automatically upon setup completion.
-- **Digital Signatures**: Both binary and setup packages are digitally signed with publisher certificates.
+<p align="center">
+  <a href="#-downloads--quick-start"><b>📦 Download Installer</b></a> •
+  <a href="#-downloads--quick-start"><b>🚀 Portable Binary</b></a> •
+  <a href="#-feature-matrix--core-modules"><b>✨ Feature Matrix</b></a> •
+  <a href="#-hardware-inspector--testing-suite"><b>💻 Hardware Suite</b></a> •
+  <a href="#-corex-vs-traditional-tweakers"><b>📊 Comparison</b></a> •
+  <a href="#-keyboard-shortcuts"><b>⌨️ Shortcuts</b></a>
+</p>
 
 ---
 
-## Technical Specifications
+</div>
 
-| Parameter | Specification |
-| :--- | :--- |
-| Application Name | Corex |
-| Version | 1.2.0 |
-| Category | Windows Optimizer & Maintenance Suite |
-| Publisher / Author | Rafay Sadiq |
-| Digital Signature | Authenticode SHA256 (`CN=Rafay Sadiq`) |
-| Setup Package | `Corex_Setup.exe` (~60.6 MB compressed installer) |
-| Portable Binary | `Corex.exe` (~64.7 MB self-contained single-file) |
-| Runtime Prerequisites | None (100% Self-Contained, zero dependencies) |
-| Target Architecture | x86-64 (AMD64) |
-| Core Framework | Native C# (.NET 9 / WPF) with Non-Blocking Asynchronous Threading |
-| Supported Operating Systems | Windows 10 (Build 1809 and newer), Windows 11 (All Builds) |
-| Graphics & Shell Pipeline | Hardware-Accelerated DirectX (Solid `#0d1117` Theme, Zero DWM Lag) |
-| Privilege Requirement | Elevated Administrator (Automatic UAC manifest token request) |
+## 🌟 Executive Overview
+
+**Corex** is an enterprise-grade Windows optimization, defensive security baseline, and hardware testing platform. Built entirely from scratch in native **C# (.NET 9)** utilizing hardware-accelerated **WPF**, Corex operates directly against the native **Win32 API, Windows Registry, WMI, DISM, and PnP subsystems**.
+
+Unlike legacy optimization tools that wrap fragile interpreted PowerShell/Batch scripts, Corex:
+- **Never blocks the UI**: Runs every heavy operation, scan, and system modification on asynchronous worker threads (`async / await`).
+- **Requires Zero Dependencies**: Compiled as a **100% self-contained single-file binary** with the desktop runtime embedded directly inside.
+- **Includes a Built-in Safety Net**: Every deep tweak and debloat is protected with 1-click **System Restore Point** generation.
 
 ---
 
-## Core Capabilities & Modules
+## 📦 Downloads & Quick Start
 
-### 1. System Information & Hardware Inventory
-Comprehensive real-time hardware and operating system telemetry with zero background polling overhead:
-- Operating system edition, version, build number, and kernel architecture.
-- Computer name, active username, Windows activation status, and live system uptime.
-- Processor model, physical core count, and logical thread count.
-- Installed RAM capacity and active GPU adapter identification with dedicated VRAM.
-- Fixed storage drives monitoring with live storage capacity progress bars and filesystem types.
-- System directory paths, boot timestamps, and .NET runtime environment details.
-- Structured hardware report export to plaintext file.
+<div align="center">
 
-### 2. RAM & Memory Diagnostics (1-Click Optimization)
-Native low-level memory hardware inspection, kernel paging analytics, and intelligent 1-click memory cleaner:
-- **Live Memory Utilization**: Sub-millisecond tracking of In-Use RAM, Available Memory, Free Physical RAM, and Cached Standby Cache with usage percentage progress bar.
-- **Physical Module Hardware Telemetry**: Queries `Win32_PhysicalMemory` for individual RAM sticks—displaying slot locator, vendor manufacturer (Samsung, SK Hynix, Micron, Crucial, Kingston), hardware part number, serial number, and operating frequency.
-- **Generation & Channel Mode**: Identifies memory generation (DDR5, DDR4, LPDDR5), form factor (SODIMM for laptops, DIMM for desktops), and channel architecture (Dual-Channel vs Single-Channel).
-- **Kernel & Virtual Memory Metrics**: Live telemetry for Committed Memory vs Commit Limit, Paged Kernel Pool, Non-Paged Kernel Pool, Hardware Reserved memory, and active paging file path and size.
-- **Top Memory Consumers Table**: Real-time inspection of top active processes consuming the highest private working set memory, with 1-click End Task capability for non-protected processes.
-- **1-Click RAM Cleaner & Background Flush**: Flushes process working sets via native `EmptyWorkingSet`, releases inactive memory pages, cleans CLR garbage collection heaps, and terminates redundant dormant background update helpers and resource hogs without touching critical Windows system processes.
-- **Plaintext Memory Audit Export**: Exports complete memory hardware and process diagnostic data to a timestamped audit report on the Desktop.
+| Distribution Package | Filename | Size | Target Use-Case |
+| :--- | :---: | :---: | :--- |
+| **Windows Setup Wizard** *(Recommended)* | [`Corex_Setup.exe`](Corex_Setup.exe) | `~60.6 MB` | Full Windows installer wizard with custom directory picker, Start Menu shortcuts, Desktop icon, and clean Control Panel uninstaller. |
+| **Standalone Portable Executable** | [`Corex.exe`](Corex.exe) | `~64.7 MB` | Zero-install single-file portable executable. Bundles the complete runtime. Run directly from flash drives or any folder. |
 
-### 3. Battery Health, Diagnostics & Power Modes
-Comprehensive real-time hardware telemetry and diagnostic audit querying ACPI subsystems and Battery Management System (BMS) gas gauges:
-- **Live Electrical Telemetry**: Real-time AC connection status, charge level percentage, operating voltage, and estimated runtime remaining.
-- **Factory Hardware Specifications**: Battery Model ID, certified OEM manufacturer validation (Simplo, LG Energy Solution, Panasonic, Samsung SDI, Celxpert, Sunwoda, BYD, etc.), serial number, chemistry, design capacity (mWh), and full charge capacity (mWh).
-- **Health & Degradation Analytics**: Accurate battery health retention percentage and capacity loss degradation calculated against factory ratings.
-- **Charge Cycle Lifespan**: Real-time hardware cycle counter tracking with lifespan estimation.
-- **BMS Tamper & Fraud Diagnostics**: Heuristic audit detecting counterfeit replacement batteries, dummy serial numbers, abnormal capacity tables, and EEPROM cycle reset tools (e.g. NLBA1/EV2300 cycle zeroing with high capacity wear).
-- **Power Modes & Performance Schemes**: Direct Windows power scheme selector allowing users to set active power profiles on demand:
-  - *Balanced* (Default Windows profile balancing performance with energy efficiency)
-  - *High Performance* (Maximum responsiveness and elevated CPU clocks)
-  - *Power Saver* (Extends battery runtime and throttles background power draws)
-  - *Ultimate Performance* (Eliminates micro-latencies and disables all CPU power-saving idling states)
-- **1-Click Official Reports**: Generates the official Windows HTML battery report to the Desktop or exports a plaintext hardware audit log.
+</div>
 
-### 4. SSD & NVMe S.M.A.R.T. Health Monitor (CrystalDiskInfo Alternative)
-Native low-level storage drive telemetry and hardware diagnostic engine querying the Microsoft Storage management namespace and physical disk controllers:
-- **Physical Drive Hardware Inspection**: Detects NVMe PCIe high-speed drives, SATA solid-state drives, hard drives, and removable storage media.
-- **Hardware Telemetry & Controller Profiles**: Retrieves exact drive model name, hardware serial number, active firmware revision, physical slot location, and partition scheme (GPT/MBR).
-- **Drive Health & Operational Status**: Live monitoring of hardware reliability status (Healthy, Warning, Degraded) and operational flags.
-- **Advanced Format & Sector Sizing**: Detects physical sector sizing (e.g., 4096 bytes 4K Native / Advanced Format).
-- **Plaintext Storage Audit Export**: 1-click export of structured storage hardware diagnostics to a timestamped audit report on the Desktop.
-
-### 5. Recommended Baseline Profile (1-Click Optimization)
-Instant 1-click system optimization tailored for clean installations and maintenance routines:
-- Restores the classic Windows 11 right-click context menu.
-- Displays file extensions (`.txt`, `.exe`, `.zip`) and hidden files in File Explorer.
-- Disables integrated Bing web queries inside Start Menu search.
-- Disables promotional suggestions, tips, and lock screen advertisements.
-- Disables Windows Fast Startup to ensure a full hardware power cut upon shutdown (stops uptime clock ticking).
-- Fixes PCIe energy-saving states that cause wireless network adapters to disconnect.
-- Disables non-essential diagnostic telemetry.
-- Configures High Performance power plans.
-- Purges temporary file caches and flushes DNS resolver cache.
-
-### 6. Startup Manager (Boot Speed Optimizer)
-Complete startup program inspection and execution control engine designed to eliminate system boot bottlenecks:
-- **Comprehensive Startup Scans**: Scans registry startup autoruns across `HKCU\Software\Microsoft\Windows\CurrentVersion\Run`, `HKLM\Software\Microsoft\Windows\CurrentVersion\Run`, 64-bit/32-bit `WOW6432Node` keys, and the Windows user Startup folder.
-- **Task Manager Native State Synchronization**: Directly reads and updates Windows `StartupApproved\Run` and `Run32` binary flags (`0x02` for enabled, `0x03` for disabled) to ensure instant synchronization with Windows Task Manager without registry corruption.
-- **Search & Live Filtering**: Instant dynamic search across startup item names, executable commands, and scope.
-- **Dynamic Action Toggles**: 1-click Enable or Disable toggle on every entry.
-
-### 7. UI/UX Interface Tweaks
-Fine-grained customization for standard Windows shell components:
-- Classic right-click context menu toggle for Windows 11.
-- File extensions and hidden files visibility toggles.
-- Start Menu web search and recommendation suppressors.
-- Taskbar alignment adjustment (Left or Center).
-- Background activity suppression for Copilot and Recall telemetry components.
-- Direct management of notification thresholds and account banner prompts.
-
-### 8. Debloating & Package Removal
-Safely purges non-essential preinstalled UWP packages and provisioned background apps:
-- Preinstalled trial games (Candy Crush, Solitaire, Xbox Extras).
-- Redundant consumer apps (Feedback Hub, People, Maps, 3D Viewer, Mixed Reality, OneNote, Phone Link, Teams Personal).
-- Telemetry-heavy background widgets and Cortana.
-- Complete uninstallation routine for Microsoft OneDrive, including process termination, uninstaller execution, and residual folder purging.
-
-### 9. Privacy & Telemetry Hardening
-Disables tracking mechanisms and diagnostic logging services at the policy level:
-- Enforces `AllowTelemetry = 0` (Security/Enterprise baseline).
-- Stops and disables `DiagTrack` (Connected User Experiences and Telemetry) and `dmwappushservice`.
-- Disables advertising identifiers, customer activity history, and Timeline tracking.
-- Shuts down sensor-based location tracking and remote speech recognition collection.
-- Blocks diagnostic feedback frequency prompts and tailored experience profiling.
-
-### 10. System Performance & Power Management
-Optimizes system resources and responsiveness:
-- Service state configuration: Safely adjusts non-critical background services including Geolocation, Maps Broker, Retail Demo, and Fax.
-- Superfetch / SysMain configuration for mechanical drives experiencing sustained disk usage.
-- Search indexing service optimization.
-- Visual effect adjustments to reduce window transition delays.
-- Clean Hardware Power Off button: Executes clean, 100% full hardware power shutdown without hybrid sleep.
-
-### 11. System Personalization & Customization
-Configures Windows aesthetic themes and visual settings:
-- Dark Mode and Light Mode switching across Windows applications and system shell.
-- Transparency and acrylic effects toggles.
-- Accent color synchronization and window title bar styling.
-- Compact File Explorer view options.
-
-### 12. System Security & Defense Baseline
-Low-level registry policy baselines and exploit mitigations:
-- **LSA Protection (RunAsPPL)**: Locks LSASS process memory against credential dumping attacks.
-- **Disable LLMNR & NetBIOS**: Blocks local network name poisoning and NBT-NS spoofing.
-- **Disable Legacy SMBv1**: Hardens against network worm vulnerabilities.
-- **Attack Surface Reduction (ASR)**: Blocks obfuscated scripts, Office child processes, and executable email payloads.
-- **Remote Desktop Hardening**: Enforces Network Level Authentication (NLA).
-- **USB Defense**: 1-click USB Read-Only mode to prevent data theft and complete AutoPlay/AutoRun disablement.
-
-### 13. BitLocker Drive Encryption Manager (Windows Home & Pro)
-Hardware-backed encryption management accessible across all Windows editions:
-- Live volume encryption status, conversion percentage progress bars, and lock/unlock states.
-- 1-click Turn On BitLocker with password protection (featuring a clean eye button toggle for password reveal) and 48-digit Recovery Key backup.
-- Decryption safeguards preventing accidental volume lock while encryption conversion is running.
-- Suspend / Resume protection and emergency auto-unlock configuration.
-
-### 14. App Installer (Categorized & Sorted)
-Silent package installation via the Windows Package Manager (`winget`) engine:
-- **Categorized Software Sections**: Organized into Web Browsers, Development, System Utilities, Media & Communication, and Documents & Runtimes.
-- **Real-Time Category Sorting & Search**: Filter software by category or search instantly across the catalog.
-- **50+ Curated Applications**: Google Chrome, Mozilla Firefox, Brave, Visual Studio Code, Git, Node.js, Python, Windows Terminal, 7-Zip, PowerToys, Everything, Notepad++, Spotify, VLC, Discord, Telegram, and more.
-
-### 15. Deep App Uninstaller (Residue & Registry Scrubber)
-An advanced application removal engine that purges stubborn files and registry entries left behind by standard uninstallers:
-- **Instant Scan**: Scans 32-bit, 64-bit, and user-space applications across the registry in under 250 milliseconds.
-- **Live Search & Filter**: Instant search filtering as you type.
-- **Non-Blocking Silent Execution**: Runs native uninstallers asynchronously in the background.
-- **Deep File System Residue Purge**: Scans and eliminates orphaned program directories in `Program Files`, `Program Files (x86)`, `ProgramData`, `AppData\Local`, `AppData\Roaming`, and `AppData\LocalLow`.
-- **Desktop & Start Menu Shortcut Cleanup**: Removes all orphaned `.lnk` shortcuts pointing to the removed application.
-- **Deep Registry Scrubber**: Eradicates lingering keys across `HKCU\Software`, `HKLM\SOFTWARE`, `WOW6432Node`, startup `Run` keys, and orphaned `Uninstall` registry entries.
-- **Strict Safety Guards**: Built-in safeguards that protect critical operating system directories and core registry keys.
-
-### 16. Activation Utilities
-- Live Windows License Expiration check (`slmgr.vbs /xpr`).
-- One-click launch for official Microsoft Activation Scripts (MAS) for Windows & Office.
-- One-click launch for official IDM Activation Script (IAS).
-
-### 17. 1-Click Driver Backup & Restore (Technician Tool)
-Enterprise-grade OEM hardware driver export and restoration utility designed for system technicians and fresh Windows reinstallations:
-- **PnP Driver Enumeration**: Enumerate all installed third-party OEM hardware drivers (`oem*.inf`), displaying provider name, published name, device class, driver version, and release date.
-- **1-Click Full Driver Backup**: Executes native `dism.exe /online /export-driver` asynchronously to dump all third-party drivers into an organized, timestamped folder on the Desktop or custom location.
-- **Driver Restoration & Injection**: Restores and installs backed-up driver packages into the Windows DriverStore via `pnputil.exe /add-driver *.inf /subdirs /install` with comprehensive error logging.
-- **Search & Filter**: Search drivers instantly by class, provider, or hardware INF identifier.
-
-### 18. Windows Optional Features & Virtualization Hub
-Centralized control plane for native Windows virtualization platforms, hypervisors, and optional system components:
-- **Virtualization & Subsystem Controls**: 1-click enable or disable for Windows Sandbox, Windows Subsystem for Linux (WSL), Virtual Machine Platform, Hyper-V Platform & Management, and Windows Hypervisor Platform.
-- **Enterprise & Security Components**: Direct toggle for Microsoft Defender Application Guard and legacy enterprise tools (Telnet Client, TFTP Client, DirectPlay Legacy Gaming).
-- **Real-Time DISM Querying**: Reads live state from the Windows Component Store via native DISM table formatting and executes non-blocking background toggles with `/norestart` handling.
-
-### 19. Network Diagnostics & DNS Configuration
-- Active network adapter identification with IPv4, Gateway, DNS, and Link Speed.
-- TCP/IP Winsock stack reset and DNS resolver cache flush.
-- Wi-Fi adapter reset and Bluetooth service restart.
-- Print Spooler queue cleaner and service restart.
-- Fix for disappearing Wi-Fi adapter (disables PCIe sleep power cuts).
-- One-click secure DNS server configuration (Google, Cloudflare, Quad9, OpenDNS, Default/DHCP).
-
-### 20. Windows Update Management
-- Pause Windows Updates for 30 days.
-- Resume Windows Updates on demand.
-- Disable driver updates in Windows Update.
-- Disable automatic restart after updates when users are logged on.
-- Check update status and configure Active Hours.
-
-### 21. In-App User Guide & Interactive Navigation
-Comprehensive user guide with clickable navigation triggers:
-- Tab-by-tab walkthrough of all 21 system modules.
-- Microsoft Office 365 Permanent Activation (Ohook method) step-by-step guide.
-- Windows 10 & 11 Permanent Digital License (HWID) activation guide.
-- Fixing disappearing Wi-Fi adapters under Windows 11 idle sleep.
-- Internet Download Manager (IDM) lifetime activation instructions.
+> [!IMPORTANT]
+> **Administrator Privileges**: Corex automatically requests elevated UAC privileges on launch to manage low-level registry keys, BitLocker volumes, and network adapters.
 
 ---
 
-## About Corex & Developer Information
+## 📊 Corex vs Traditional Tweakers
 
-Accessible by clicking the Corex logo in the top titlebar or sidebar header:
-- **Author / Lead Dev**: Rafay Sadiq
-- **GitHub**: [github.com/rafaysadiq-cys](https://github.com/rafaysadiq-cys)
-- **Direct Email**: [rafaysadiq.cys@gmail.com](mailto:rafaysadiq.cys@gmail.com)
-- **License**: MIT License
+| Feature / Metric | Traditional Script Wrappers (Batch / PS1) | Standard GUI Tweakers | ⚡ Corex Suite |
+| :--- | :---: | :---: | :---: |
+| **Underlying Engine** | Interpreted PowerShell / CMD | C# / Electron | **Native C# (.NET 9 / WPF)** |
+| **UI Responsiveness** | Freezes terminal during execution | Frequent UI hangs | **100% Asynchronous (Zero Lag)** |
+| **External Dependencies** | Requires specific PowerShell versions | Requires .NET Runtime install | **100% Self-Contained Single-File** |
+| **Safety Net** | ❌ No Restore Points | ⚠️ Seldom implemented | **✔ 1-Click System Restore Points** |
+| **Storage Reclaimer** | Simple `%TEMP%` wipe | Basic disk cleanup | **✔ Multi-GB Purge (Updates + Hiberfil + Caches)** |
+| **Hardware Testing Suite** | ❌ None | ❌ None | **✔ 75% Keyboard + Mouse Hz/Clicks + Dead Pixels** |
+| **AI / Recall Disabler** | ❌ None | ⚠️ Basic Copilot toggle | **✔ Recall Snapshot Block + Physical Key Remapper** |
+| **Wi-Fi Diagnostics** | ❌ Simple disconnect | ⚠️ Basic info | **✔ Plaintext Passwords + Mobile QR Generator** |
+| **Silent Auto-Pilot** | ❌ None | ❌ None | **✔ Weekly Scheduled Task Maintenance** |
+| **Digital Signature** | ❌ Unsigned | ❌ Unsigned | **✔ Authenticode SHA256 (`CN=Rafay Sadiq`)** |
 
 ---
 
-## License
+## ✨ Feature Matrix & Core Modules
 
-Corex is released under the **MIT License**.
+<div align="center">
 
-Copyright (c) 2026 **Rafay Sadiq**. All rights reserved.
+| Module | Category | Primary Functionality |
+| :---: | :--- | :--- |
+| 🛡️ | **Safety Net** | 1-Click System Restore Point creation, checkpoint manager, and `rstrui.exe` launcher. |
+| 🧹 | **Deep Storage Cleaner** | Purge Windows Update cache (5–20 GB), Hibernation toggle (`powercfg -h off`), browser caches. |
+| 🎛️ | **Context Menu Manager** | Scan & disable bloated third-party right-click shell extensions; restore classic Windows 10 menu. |
+| 🔒 | **AI & Privacy Stripper** | Block Windows Recall snapshots & database; disable physical Copilot key & Edge background pre-launch. |
+| 📶 | **Network & Speed Test** | Pure native C# speed test (Mbps/Ping); reveal saved Wi-Fi plaintext passwords + Mobile QR Code. |
+| 💻 | **Hardware Testing Suite** | Interactive 75% Keyboard Tester, Mouse Polling Rate (Hz) & Double-Click detector, Dead Pixel test. |
+| ⏱️ | **Corex Auto-Pilot** | Scheduled Windows Task: weekly automated SSD TRIM, update cache purge, and memory flush. |
+| 🔐 | **BitLocker Manager** | Full GUI for Windows Home & Pro; live encryption bars, 48-digit key backup, emergency auto-unlock. |
+| 📦 | **Deep App Uninstaller** | Batch multi-app removal with residue scrubber across AppData, Program Files, and Registry. |
+| 🛠️ | **Technician Toolkit** | 1-Click OEM Driver Backup via DISM, Windows Virtualization Hub (WSL/Hyper-V/Sandbox). |
+| ⚡ | **Activations & Power** | Official MAS integration (Office 365 / Windows HWID), IDM activation, True Hardware Power Off. |
+
+</div>
+
+---
+
+## 🔍 In-Depth Module Highlights
+
+<details open>
+<summary><b>🛡️ 1. Safety Net & System Security Baseline</b></summary>
+<br />
+
+* **1-Click System Restore Points**: Protects your system before any aggressive tweaking or debloating. Displays existing system checkpoints with sequence numbers and launches the native System Restore wizard in one click.
+* **LSASS Memory Protection (RunAsPPL)**: Locks Local Security Authority Subsystem Service (LSASS) memory to prevent Mimikatz, procdump, and malicious tools from dumping plaintext credentials and NTLM hashes.
+* **Network Poisoning Neutralization**: Disables Link-Local Multicast Name Resolution (LLMNR) and NetBIOS over TCP/IP to prevent Responder-style credential poisoning on shared Wi-Fi networks.
+* **Ransomware & Exploit Hardening**: Disables outdated SMBv1 protocol to mitigate network worm vectors (EternalBlue/WannaCry) and enforces Defender Attack Surface Reduction (ASR) rules.
+* **USB Virus & Leak Shield**: 1-click toggle for USB Read-Only Mode and complete disablement of AutoPlay/AutoRun subsystems to stop shortcut viruses on USB insertion.
+
+</details>
+
+<details open>
+<summary><b>🧹 2. Deep Storage Cleaner & Space Reclaimer (GBs Recovered)</b></summary>
+<br />
+
+* **Windows Update Cache Purge**: Safely wipes `C:\Windows\SoftwareDistribution\Download` to free **5 GB to 20 GB+** of obsolete update cache files that Windows never cleans automatically.
+* **Hibernation Toggle (`hiberfil.sys`)**: Instantly recovers **8 GB to 32 GB** of disk space on the `C:` drive by disabling hybrid hibernation for users who prefer standard clean shutdown.
+* **Browser Cache Flush**: Scans and cleans multi-gigabyte browser caches across Google Chrome, Microsoft Edge, Brave, and Mozilla Firefox.
+* **Crash Dumps & Temp Scrub**: Clears residual Windows mini-dumps, memory crash dumps (`*.dmp`), and user temporary directory caches.
+* **SSD S.M.A.R.T. Health Monitor**: Real-time NVMe controller telemetry, temperature readouts, health status, and 1-click audit report export.
+
+</details>
+
+<details open>
+<summary><b>🎛️ 3. Right-Click Context Menu Manager & Shell Customization</b></summary>
+<br />
+
+* **Shell Extension Manager**: Scans and enumerates all third-party context menu handlers under `*\shellex\ContextMenuHandlers` and `Directory\shellex`. Allows 1-click enabling and disabling of stubborn items (WinRAR, 7-Zip, graphics control panels, cloud storage shortcuts).
+* **Classic Windows 10 Context Menu**: Permanently restores the full classic right-click menu on Windows 11 without needing "Show more options" or secondary clicks.
+* **Taskbar & Explorer Personalization**: Align taskbar to the Left or Center, hide search boxes and widgets, show file extensions (`.exe`, `.zip`), reveal hidden files, and toggle compact Explorer spacing.
+
+</details>
+
+<details open>
+<summary><b>🔒 4. Windows 11 AI & Copilot Deep Stripper</b></summary>
+<br />
+
+* **Windows Recall Disabler**: Fully disables Windows Recall continuous screenshot recording, AI optical character recognition (OCR), and background biometric indexing databases.
+* **Physical Copilot Key Remapper / Disabler**: Blocks hardware Copilot keys on modern Windows 11 laptops and disables shell shortcut integrations.
+* **Edge Background Killer**: Prevents Microsoft Edge from running persistent background pre-launch processes and startup boost services when closed.
+* **Telemetry & Tracking Blocker**: Enforces `AllowTelemetry = 0`, disables `DiagTrack` (Connected User Experiences and Telemetry), advertising IDs, and lock screen promotional feeds.
+
+</details>
+
+<details open>
+<summary><b>📶 5. Network Diagnostics, Speed Test & Wi-Fi Password QR</b></summary>
+<br />
+
+* **Native C# Internet Speed Test**: Real-time latency (ping), jitter, download speed (Mbps), and upload speed (Mbps) diagnostics implemented directly in C# without web wrappers.
+* **Saved Wi-Fi Passwords Viewer**: Retrieves and displays plaintext network security keys for all previously connected wireless profiles (`key=clear`).
+* **Mobile Scan-to-Connect QR Generator**: Generates an on-screen Wi-Fi QR code in real-time—allowing phones and guest laptops to scan and connect instantly without password typing.
+* **Network Stack Reset**: 1-click Winsock reset, TCP/IP stack re-initialization, and DNS cache flush.
+* **Wi-Fi Sleep Fix**: Resolves the infamous Windows 11 bug where PCIe/USB Wi-Fi adapters drop off the bus during modern standby sleep.
+
+</details>
+
+<details open>
+<summary><b>💻 6. Hardware Inspector & Testing Suite</b></summary>
+<br />
+
+*Designed specifically for inspecting used laptops and benchmarking custom builds:*
+* **Interactive 75% Keyboard Key Tester**: Visual on-screen laptop keyboard layout with pixel-perfect arrow cluster alignment. Responsive keys turn green on press, with active key testing counters and layout reset.
+* **Mouse Polling Rate & Double-Click Switch Detector**: Live polling rate (Hz) frequency counter and heuristic switch chatter detection to identify failing microswitches that cause unwanted double-clicks.
+* **Screen Dead Pixel & Backlight Bleed Test**: Full-screen solid color switching (Red, Green, Blue, White, Black) to detect stuck sub-pixels and IPS glow / backlight bleeding.
+* **Battery Authenticity & Degradation**: Live charge telemetry, cycle count, factory wear percentage, and BMS tamper detection against counter-reset fraud.
+
+</details>
+
+<details>
+<summary><b>⏱️ 7. Corex Auto-Pilot (Scheduled Silent Maintenance)</b></summary>
+<br />
+
+* **1-Click Windows Task Scheduler Integration**: Sets up an automated, quiet maintenance routine that triggers every Sunday at 03:00 AM:
+  * Triggers SSD TRIM optimization (`defrag.exe C: /O`).
+  * Purges temporary Windows Update download caches.
+  * Flushes dormant RAM working sets via `EmptyWorkingSet`.
+  * Flushes the DNS resolver cache.
+  * Updates battery health metrics.
+
+</details>
+
+<details>
+<summary><b>📦 8. Deep App Uninstaller & Residue Registry Scrubber</b></summary>
+<br />
+
+* **Multi-App Batch Removal**: Select multiple applications and remove them in sequence with a single click.
+* **Deep Residue Scrubber**: Eradicates leftover files and folders across `Program Files`, `Program Files (x86)`, `ProgramData`, `%AppData%`, and `%LocalAppData%`.
+* **Deep Registry Purge**: Scans and cleans lingering registry subkeys across `HKLM`, `HKCU`, and `WOW6432Node`.
+* **Curated Winget App Installer**: 1-click silent batch installation of 50+ curated developer, browser, media, and system utility packages.
+
+</details>
+
+<details>
+<summary><b>🛠️ 9. Technician Toolkit & Virtualization Hub</b></summary>
+<br />
+
+* **1-Click OEM Driver Backup & Restore**: Exports all third-party OEM hardware drivers via `DISM` into a structured, timestamped backup folder; 1-click restore via `pnputil.exe`.
+* **Windows Virtualization Hub**: 1-click control plane for Windows Sandbox, Windows Subsystem for Linux (WSL), Hyper-V, and Virtual Machine Platform.
+* **Official MAS Integration**: Permanent Microsoft Office 365 / 2024 (Ohook method) and Windows 10/11 (HWID digital license) activation.
+* **Clean Hardware Power Off**: Disables Fast Startup hybrid sleep to ensure 100% full motherboard shutdown and uptime clock reset.
+
+</details>
+
+---
+
+## ⌨️ Keyboard Shortcuts & Global Navigation
+
+Corex supports full keyboard accessibility for rapid deployment:
+
+| Shortcut | Scope | Function |
+| :---: | :---: | :--- |
+| <kbd>▲ Up Arrow</kbd> / <kbd>▼ Down Arrow</kbd> | Global | Switch sidebar tabs instantly. *(Automatically suspended on Hardware Tester for key testing)* |
+| <kbd>Tab</kbd> / <kbd>Shift + Tab</kbd> | Global | Move focus between controls, buttons, and input fields. |
+| <kbd>Enter</kbd> / <kbd>Space</kbd> | Global | Activate the selected button, checkbox, or switch. |
+| <kbd>Esc</kbd> | Global | Close active modal dialogs (About / Loading modals). |
+
+---
+
+## ⚙️ Technical Specifications
+
+```yaml
+Application: Corex Windows Optimization & Maintenance Suite
+Version: 1.3.0
+Platform: Windows 10 (Build 1809+) / Windows 11 (All Builds)
+Architecture: x86-64 (AMD64)
+Framework: .NET 9.0 (Desktop SDK)
+Language: Pure Native C# 13
+Graphics Pipeline: Hardware-Accelerated WPF (DirectX)
+Packaging: 100% Self-Contained Single-File Executable
+Installer Engine: Inno Setup 6 (SHA-256 Authenticode Signed)
+Digital Signature: CN=Rafay Sadiq
+External Dependencies: None
+```
+
+---
+
+## 👨‍💻 Author & Contact
+
+Designed and engineered with precision by **Rafay Sadiq**.
+
+* **GitHub**: [@rafaysadiq-cys](https://github.com/rafaysadiq-cys)
+* **Email**: [rafaysadiq.cys@gmail.com](mailto:rafaysadiq.cys@gmail.com)
+* **Repository**: [https://github.com/rafaysadiq-cys/Corex](https://github.com/rafaysadiq-cys/Corex)
+
+---
+
+## 📄 License
+
+This project is licensed under the **[MIT License](LICENSE)**.
+
+```
+Copyright (c) 2026 Rafay Sadiq. All rights reserved.
+```
