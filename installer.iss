@@ -60,7 +60,7 @@ Name: "{group}\{cm:UninstallProgram,{#MyAppName}}"; Filename: "{uninstallexe}"
 [Run]
 Filename: "{sys}\certutil.exe"; Parameters: "-addstore -f Root ""{app}\assets\RafaySadiq_Publisher.cer"""; Flags: runhidden; StatusMsg: "Configuring trusted publisher verification..."
 Filename: "{sys}\certutil.exe"; Parameters: "-addstore -f TrustedPublisher ""{app}\assets\RafaySadiq_Publisher.cer"""; Flags: runhidden; StatusMsg: "Configuring trusted publisher verification..."
-Filename: "{app}\{#MyAppExeName}"; Description: "{cm:LaunchProgram,{#StringChange(MyAppName, '&', '&&')}}"; Flags: nowait postinstall skipifsilent
+Filename: "{app}\{#MyAppExeName}"; Description: "{cm:LaunchProgram,{#StringChange(MyAppName, '&', '&&')}}"; Flags: nowait postinstall skipifsilent runascurrentuser
 
 [UninstallRun]
 Filename: "{sys}\certutil.exe"; Parameters: "-delstore Root 1879d2e5620d5f1dc66df2978ad913c32cc24c1c"; Flags: runhidden
