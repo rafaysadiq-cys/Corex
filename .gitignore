@@ -12,5 +12,8 @@ Corex_*.exe
 *.tmp
 *.log
 *.bak
+*.prev
+*.old
+*.running
 .vs/
 .vscode/
