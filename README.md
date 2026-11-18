@@ -51,7 +51,7 @@ The application is distributed as a single-file, 100% self-contained binary with
 | **Storage Reclaimer** | Multi-gigabyte purge of Windows Update download cache (`SoftwareDistribution`), hibernation toggle (`powercfg -h off`), and browser cache flushes. |
 | **Context Menu Manager** | Scan and toggle third-party shell extensions under `*\shellex` and `Directory\shellex`; restore classic Windows 10 context menu. |
 | **Windows 11 AI Stripper** | Complete block of Windows Recall continuous screen capture databases, physical Copilot key remapper, and Edge pre-launch killer. |
-| **Network &amp; Diagnostics** | Pure C# download/upload/ping speed test, plaintext Wi-Fi password viewer, and scan-to-connect mobile QR code generator. |
+| **Network &amp; Diagnostics** | Pure C# download/upload/ping speed test, saved Wi-Fi password viewer with Windows user verification and eye toggle, Enterprise 802.1X (eduroam) network detection, and scan-to-connect mobile QR generator. |
 | **Hardware Testing Suite** | Interactive 75% visual keyboard tester, real-time mouse polling rate (Hz) and double-click fault detection, and screen dead pixel test. |
 | **Scheduled Auto-Pilot** | Windows Task Scheduler automation executing weekly SSD TRIM, temporary cache purge, DNS flush, and memory working set release. |
 | **Security Baseline** | UEFI Secure Boot hardware inspection, kernel driver signature enforcement (Test-Signing / No-Integrity), TLS 1.0–1.3 SCHANNEL protocol manager, LSASS RunAsPPL, SMBv1 closure, and USB protection. |
@@ -64,6 +64,7 @@ The application is distributed as a single-file, 100% self-contained binary with
 
 ## Architectural Highlights
 
+* **Protected Wi-Fi Credential Security**: Saved Wi-Fi passwords remain securely masked (`●●●●●●●●`) by default. Unhiding or copying network keys requires explicit Windows user account password authentication. Enterprise 802.1X / RADIUS networks (such as eduroam) are automatically identified with institutional login details rather than misleading static keys.
 * **UEFI Hardware Integrity & TLS Protocol Controls**: Enables real-time verification of UEFI Secure Boot status, configuration of Windows bootloader kernel integrity policies (Test-Signing mode and driver integrity enforcement), 1-click direct reboot into UEFI BIOS firmware setup, and centralized management of Windows SCHANNEL TLS protocols (TLS 1.0, 1.1, 1.2, 1.3) with modern and legacy presets.
 * **Instant Lazy-Loading Architecture**: Eliminates application launch delays by offloading resource-heavy registry and network scans to on-demand navigation triggers, ensuring instant startup response upon UAC elevation.
 * **Firewall Controller with Auto-Reactivation Timer**: Allows users to temporarily suspend Windows Firewall across Domain, Private, and Public profiles to facilitate software installations or network testing. A real-time countdown timer automatically re-engages firewall protection once the duration elapses, preventing accidental exposure.
