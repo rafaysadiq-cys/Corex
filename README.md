@@ -54,7 +54,7 @@ The application is distributed as a single-file, 100% self-contained binary with
 | **Network &amp; Diagnostics** | Pure C# download/upload/ping speed test, plaintext Wi-Fi password viewer, and scan-to-connect mobile QR code generator. |
 | **Hardware Testing Suite** | Interactive 75% visual keyboard tester, real-time mouse polling rate (Hz) and double-click fault detection, and screen dead pixel test. |
 | **Scheduled Auto-Pilot** | Windows Task Scheduler automation executing weekly SSD TRIM, temporary cache purge, DNS flush, and memory working set release. |
-| **Security Baseline** | LSASS RunAsPPL password locking, LLMNR/NetBIOS poisoning neutralization, SMBv1 closure, and USB virus AutoRun prevention. |
+| **Security Baseline** | UEFI Secure Boot hardware inspection, kernel driver signature enforcement (Test-Signing / No-Integrity), TLS 1.0–1.3 SCHANNEL protocol manager, LSASS RunAsPPL, SMBv1 closure, and USB protection. |
 | **BitLocker Manager** | Full GUI encryption dashboard for Windows Home and Pro editions, 48-digit numerical recovery key backup, and emergency unlock. |
 | **Deep App Uninstaller** | Batch multi-app uninstaller with residue directory scrubbing across `Program Files` and `AppData`, plus deep registry cleanup. |
 | **Technician Hub** | 1-Click OEM driver backup and restoration via `DISM`/`pnputil`, Windows virtualization feature management (WSL, Hyper-V, Sandbox). |
@@ -64,6 +64,8 @@ The application is distributed as a single-file, 100% self-contained binary with
 
 ## Architectural Highlights
 
+* **UEFI Hardware Integrity & TLS Protocol Controls**: Enables real-time verification of UEFI Secure Boot status, configuration of Windows bootloader kernel integrity policies (Test-Signing mode and driver integrity enforcement), 1-click direct reboot into UEFI BIOS firmware setup, and centralized management of Windows SCHANNEL TLS protocols (TLS 1.0, 1.1, 1.2, 1.3) with modern and legacy presets.
+* **Instant Lazy-Loading Architecture**: Eliminates application launch delays by offloading resource-heavy registry and network scans to on-demand navigation triggers, ensuring instant startup response upon UAC elevation.
 * **Firewall Controller with Auto-Reactivation Timer**: Allows users to temporarily suspend Windows Firewall across Domain, Private, and Public profiles to facilitate software installations or network testing. A real-time countdown timer automatically re-engages firewall protection once the duration elapses, preventing accidental exposure.
 * **Non-Blocking Asynchronous Engine**: Every deep scan, disk cleanup, and registry modification executes on background worker threads, preventing interface freezes and providing live timestamped console logging.
 * **Direct Subsystem Interop**: Bypasses slow script interpreters to interface directly with low-level Windows APIs, ensuring deterministic execution and sub-millisecond status queries.

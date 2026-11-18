@@ -5,7 +5,7 @@
 ; =====================================================================
 
 #define MyAppName "Corex"
-#define MyAppVersion "1.2.0"
+#define MyAppVersion "1.3.0"
 #define MyAppPublisher "Rafay Sadiq"
 #define MyAppURL "https://github.com/rafaysadiq-cys/Corex"
 #define MyAppExeName "Corex.exe"
@@ -14,7 +14,7 @@
 AppId={{9ACFCD0D-8D45-4F0A-B7FE-01A3396F93D2}
 AppName={#MyAppName}
 AppVersion={#MyAppVersion}
-AppVerName={#MyAppName} v1.2
+AppVerName={#MyAppName} v1.3.0
 AppPublisher={#MyAppPublisher}
 AppPublisherURL={#MyAppURL}
 AppSupportURL={#MyAppURL}
@@ -33,7 +33,7 @@ ArchitecturesInstallIn64BitMode=x64compatible
 DisableProgramGroupPage=yes
 UninstallDisplayIcon={app}\{#MyAppExeName}
 UninstallDisplayName={#MyAppName}
-VersionInfoVersion=1.2.0.0
+VersionInfoVersion=1.3.0.0
 VersionInfoCompany={#MyAppPublisher}
 VersionInfoDescription=Corex Windows Optimization & Maintenance Suite
 VersionInfoCopyright=Copyright (C) 2026 Rafay Sadiq
